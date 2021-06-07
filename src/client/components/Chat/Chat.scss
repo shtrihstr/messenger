@@ -1,0 +1,113 @@
+.chat-view {
+  padding: 70px 16px 0;
+}
+
+.chat-header {
+  padding: 16px 16px 8px; // TODO: move 8px based sizing to the variables
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background-color: #F0F1F2;  // TODO: move colors to the variables
+
+  &__back {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: 0;
+    padding: 0;
+    margin: 0 16px 0 0;
+    font-size: 24px;
+    color: #74b9ff;
+  }
+
+  &__avatar {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    padding: 0 0 0 8px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+
+.chat {
+  padding: 56px 0 108px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__item {
+    display: block;
+    padding: 6px 12px;
+    margin: 8px 0 0;
+    line-height: 18px;
+    border-radius: 15px;
+    background-color: #fff;
+    max-width: 80%;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  &__item--outcome {
+    align-self: flex-end;
+    background-color: #74b9ff;
+  }
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 16px 48px;
+  background-color: #dfe6e9;
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    box-sizing: border-box;
+    border: 0;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 16px;
+    outline: none;
+    flex-grow: 1;
+  }
+
+  &__button {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: 0;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #74b9ff;
+    margin-left: 8px;
+    flex-shrink: 0;
+    text-align: center;
+
+    &:disabled {
+      background-color: #b2bec3;
+    }
+  }
+}
+
