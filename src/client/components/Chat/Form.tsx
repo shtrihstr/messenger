@@ -22,7 +22,8 @@ export const Form: React.FC<Props> = ({ friendId }) => {
             }));
             setText('');
         }
-    }
+    };
+
     return (
         <form className="message-form" onSubmit={onSubmit}>
             <input
@@ -39,8 +40,8 @@ export const Form: React.FC<Props> = ({ friendId }) => {
                 disabled={text === ''}
                 title="Send"
                 tabIndex={1}
-            >▶</button>
+            >&#10148;</button>
         </form>
-    )
+    );
 };
 

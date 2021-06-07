@@ -1,5 +1,5 @@
 .chat-view {
-  padding: 70px 16px 0;
+  padding: 70px 0 0;
 }
 
 .chat-header {
@@ -41,7 +41,8 @@
 }
 
 .chat {
-  padding: 56px 0 108px;
+  box-sizing: border-box;
+  padding: 56px 16px 108px;
   margin: 0;
   list-style: none;
   display: flex;
@@ -104,6 +105,9 @@
     margin-left: 8px;
     flex-shrink: 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:disabled {
       background-color: #b2bec3;
@@ -111,3 +115,13 @@
   }
 }
 
+
+// Ugly fix for iOS Safari
+@supports (-webkit-touch-callout: none) {
+  .chat {
+    padding-bottom: 16px;
+  }
+  .message-form {
+    position: static;
+  }
+}
